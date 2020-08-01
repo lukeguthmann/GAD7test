@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css font -->
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
     <title>Document</title>
 </head>
 <body>
-    <div class='container'>
+    <div class='container-fluid'>
 
+        <div class='row'>
+            <!-- the 100% makes the image take up the page and not over the page. so shrinks it to -->
+                <img src="./img/topBanner.jpg" width="100%">
+            </div>
+        </div>
+    </div>
+    
+    <div class='container'>
         <!-- new row for question 1 -->
         <div class='row'>
             
-            <!-- the question column -->
-            <div class='col-sm-6'>
+            <!-- the question column and overriding top broder so not touching banner -->
+            <div class='col-sm-6' style="border-top: none;">
                 QUESTION1
             </div>
 
-            <!-- the response column -->
-            <div class='col-sm-6' id='response-for-question-one'>
+            <!-- the response column and overriding top broder so not touching banner -->
+            <div class='col-sm-6' id='response-for-question-one' style="border-top: none;">
 
                 <!-- start of form for user respnses -->
                 <form>
@@ -200,6 +211,21 @@
         </div>
     </div>
 
+    <style>
+        .col-sm-6 {
+            border: solid black 1px;
+            border-bottom-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            padding-top: 10px;
+            font-family: 'Arvo', serif;
+            line-height: 2;
+
+        }
+        .html{
+            font-family: 'Arvo', serif;
+        }
+    </style>
 
 
 
