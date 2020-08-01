@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class='container'>
+
+        <!-- new row for question 1 -->
+        <div class='row'>
+            
+            <!-- the question column -->
+            <div class='col-sm-6'>
+                QUESTION1
+            </div>
+
+            <!-- the response column -->
+            <div class='col-sm-6' id='response-for-question-one'>
+
+                <!-- start of form for user respnses -->
+                <form>
+
+                    <input type="radio" id="r1" name="questionONE" value="0" checked="checked"> Not at all <br>
+                    <input type="radio" id="r2" name="questionONE" value=1> Several days <br>
+                    <input type="radio" id="r3" name="questionONE" value=2> More than half the days  <br>
+                    <input type="radio" id="r3" name="questionONE" value=3> Nearly every day <br> 
+                    <br>
+            </div>
+        </div>
+
+            <div class='row'>
+                <div class='col-sm-6'>
+                    QUESTION2
+                </div>
+
+                <div class='col-sm-6'>
+
+                        <input type="radio" id="r1" name="questionTWO" value="0" checked="checked"> Not at all <br>
+                        <input type="radio" id="r2" name="questionTWO" value=1> Several days <br>
+                        <input type="radio" id="r3" name="questionTWO" value=2> More than half the days  <br>
+                        <input type="radio" id="r3" name="questionTWO" value=3> Nearly every day <br>
+                        <br>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-sm-6'>
+                    QUESTION 3
+                </div>    
+                <div class='col-sm-6'>
+                    <input type="radio" id="r1" name="questionTHREE" value="0" checked="checked"> Not at all <br>
+                    <input type="radio" id="r2" name="questionTHREE" value=1> Several days <br>
+                    <input type="radio" id="r3" name="questionTHREE" value=2> More than half the days  <br>
+                    <input type="radio" id="r3" name="questionTHREE" value=3> Nearly every day <br>
+                    <br>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-sm-6'>
+                    QUESTION 4
+                </div>    
+                <div class='col-sm-6'>
+
+                    <input type="radio" id="r1" name="questionFOUR" value="0" checked="checked"> Not at all <br>
+                    <input type="radio" id="r2" name="questionFOUR" value=1> Several days <br>
+                    <input type="radio" id="r3" name="questionFOUR" value=2> More than half the days  <br>
+                    <input type="radio" id="r3" name="questionFOUR" value=3> Nearly every day <br>
+                    <br>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-sm-6'>
+                    QUESTION 5
+                </div>    
+                <div class='col-sm-6'>
+                    <input type="radio" id="r1" name="questionFIVE" value="0" checked="checked"> Not at all <br>
+                    <input type="radio" id="r2" name="questionFIVE" value=1> Several days <br>
+                    <input type="radio" id="r3" name="questionFIVE" value=2> More than half the days  <br>
+                    <input type="radio" id="r3" name="questionFIVE" value=3> Nearly every day <br>
+                    <br>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-sm-6'>
+                    QUESTION 6
+                </div>    
+                <div class='col-sm-6'>
+                    <br>
+
+                    <input type="radio" id="r1" name="questionSIX" value="0" checked="checked"> Not at all <br>
+                    <input type="radio" id="r2" name="questionSIX" value=1> Several days <br>
+                    <input type="radio" id="r3" name="questionSIX" value=2> More than half the days  <br>
+                    <input type="radio" id="r3" name="questionSIX" value=3> Nearly every day <br>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-sm-6'>
+                    QUESTION 7
+                </div>    
+                <div class='col-sm-6'>
+
+                    <input type="radio" id="r1" name="questionSEVEN" value="0" checked="checked"> Not at all <br>
+                    <input type="radio" id="r2" name="questionSEVEN" value=1> Several days <br>
+                    <input type="radio" id="r3" name="questionSEVEN" value=2> More than half the days  <br>
+                    <input type="radio" id="r3" name="questionSEVEN" value=3> Nearly every day <br>
+                    <br>
+
+                </div>
+            </div>
+                    <br>
+
+
+                    <input type='button' id="submit" value='get score'></button>
+                <!-- end of form -->
+                <form>
+
+                <script>
+                        let totalScore = 0;
+                        document.getElementById('submit').onclick = function() {
+                        var radios1 = document.getElementsByName('questionONE');
+                        for (var radio1 of radios1) {
+                            if (radio1.checked) {
+                                //converting the string value that is stored in each input type radio to a number
+                                totalScore += Number(radio1.value);
+
+                                console.log(radio1) // prints .. <input type="radio" id="r3" name="rate" value="2" checked="checked">
+                                console.log(radio1.name); // this would print "rate"
+                                console.log(radio1.type); // this would print 'radio'
+                                break
+                            }
+                        }
+
+                        var radios2 = document.getElementsByName('questionTWO');
+                        for (var radio2 of radios2) {
+                            if (radio2.checked) { 
+                                totalScore += Number(radio2.value);
+                            }
+                        }
+
+                        var radios3 = document.getElementsByName('questionTHREE');
+                        for (var radio3 of radios3) {
+                            if (radio3.checked) {
+                                
+                                totalScore += Number(radio3.value);
+
+                            }
+                        }
+
+                        var radios4 = document.getElementsByName('questionFOUR');
+                        for (var radio4 of radios4) {
+                            if (radio4.checked) {
+                                
+                                totalScore += Number(radio4.value);
+
+                            }
+                        }
+
+                        var radios5 = document.getElementsByName('questionFIVE');
+                        for (var radio5 of radios5) {
+                            if (radio5.checked) {
+                                
+                                totalScore += Number(radio5.value);
+
+                            }
+                        }
+
+                        var radios6 = document.getElementsByName('questionSIX');
+                        for (var radio6 of radios6) {
+                            if (radio6.checked) {
+                                
+                                totalScore += Number(radio6.value);
+
+                            }
+                        }
+
+                        var radios7 = document.getElementsByName('questionSEVEN');
+                        for (var radio7 of radios7) {
+                            if (radio7.checked) {
+                                
+                                totalScore += Number(radio7.value);
+
+                            }
+                        }
+                    console.log(totalScore);  
+                    //resetting the total score so if the user submits again, it won't add onto that  
+                    totalScore = 0;
+                    }
+
+
+                </script>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
