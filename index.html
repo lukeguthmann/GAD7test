@@ -34,16 +34,20 @@
         <div class='row'>
             <div class='col'>
                 <br>
-                Generalized Anxiety Disorder 7 (GAD-7) is a self-reported questionnaire for screening and severity measuring of 
-                generalized anxiety disorder (GAD).[1] GAD-7 has seven items, which measure severity of various signs of GAD according to reported 
-                response categories with assigned points (see below). Assessment is indicated by the total score, which is made up by adding together 
-                the scores for the scale of all seven items.[2]
+                <br>
+                <br>
+                Generalized Anxiety Disorder 7 is a self-reported questionnaire for screening and severity measuring of 
+                generalized anxiety disorder .GAD-7 has seven items, which measure severity of various signs of GAD according to reported 
+                response categories with assigned points. Assessment is indicated by the total score, which is made up by adding together 
+                the scores for the scale of all seven items.
 
-                GAD-7 is a sensitive self-administrated test to assess generalized anxiety disorder,[3] normally used in outpatient and primary care 
-                settings for referral to a psychiatrist pending outcome.[4] However, it cannot be used as replacement for clinical assessment and 
+                GAD-7 is a sensitive self-administrated test to assess generalized anxiety disorder, normally used in outpatient and primary care 
+                settings for referral to a psychiatrist pending outcome. However, it cannot be used as replacement for clinical assessment and 
                 additional evaluation should be used to confirm a diagnosis of GAD. <br />
                 source: Wikipedia
-                <br /><br />
+                <br />
+                <br />
+                <br>
             </div>
         </div>
     </div>
@@ -56,7 +60,7 @@
         </div>
 
     </div>
-
+    <br>
     <div class='container'>
         <!-- new row for question 1 -->
         <div class='row box-shape'>
@@ -79,7 +83,7 @@
                     <br>
             </div>
         </div>
-
+            <br>
             <div class='row box-shape3'>
                 <div class='col-sm-6'>
                     Not being able to stop or control worrying?
@@ -95,6 +99,8 @@
                 </div>
             </div>
 
+            <br>
+
             <div class='row box-shape'>
                 <div class='col-sm-6'>
                     Worrying too much about different things?
@@ -107,6 +113,8 @@
                     <br>
                 </div>
             </div>
+
+            <br>
 
             <div class='row box-shape3'>
                 <div class='col-sm-6'>
@@ -122,6 +130,8 @@
                 </div>
             </div>
 
+            <br>
+
             <div class='row box-shape'>
                 <div class='col-sm-6'>
                     Being so restless that it is hard to sit still?	
@@ -134,6 +144,8 @@
                     <br>
                 </div>
             </div>
+
+            <br>
 
             <div class='row box-shape3'>
                 <div class='col-sm-6'>
@@ -148,6 +160,8 @@
                     <input type="radio" id="r3" name="questionSIX" value=3> Nearly every day <br>
                 </div>
             </div>
+
+            <br>
 
             <div class='row box-shape'>
                 <div class='col-sm-6'>
@@ -168,8 +182,37 @@
                 <div class='text-center'>
                     <input type='button' id="submit" value='S U B M I T' class='submitButton'></button>
                 </div>
+
+                <div class='row'>
+                    <div class='col-sm-4'>
+                        <!-- left empty -->
+                    </div>
+                    <div class='col-sm-4'>
+                        <h5 id='show-user-score' style="font-size: 1.5em;">
+                        <!-- javascript goes here -->
+                        </h5>
+                    </div>
+                    <div class='col-sm-4'>
+                        <!-- left empty -->
+                    </div>
+                </div>
                 <!-- end of form -->
-                <form>
+            </form>
+
+
+
+                <!-- end of container -->
+                </div>
+                <div class='container-fluid'>
+                    <div class='row'>
+                        <div class="col text-center" style="background-color: #2e2828; color: white">
+                            <br>
+                            created by: www.guthub.com/lukeguthmann
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
 
                 <script>
                         let totalScore = 0;
@@ -238,7 +281,19 @@
 
                             }
                         }
-                    console.log(totalScore);  
+                        
+                        let htmlForScore = "<p class='box-shape4'> your score is : " + totalScore + "<br>"; 
+
+                        if(totalScore <= 4  ){
+                            document.getElementById('show-user-score').innerHTML = htmlForScore + " Minimal anxiety </p> <br>";
+                        } else if (totalScore >= 5 && totalScore <= 9){
+                            document.getElementById('show-user-score').innerHTML = htmlForScore + " Mild anxiety </p> <br>";
+                        } else if (totalScore >= 10 && totalScore <= 14){
+                            document.getElementById('show-user-score').innerHTML = htmlForScore + " Moderate anxiety </p> <br>";
+                        } else{
+                            document.getElementById('show-user-score').innerHTML = htmlForScore + " Severe anxiety </p> <br>";
+                        }
+                    
                     //resetting the total score so if the user submits again, it won't add onto that  
                     totalScore = 0;
                     }
@@ -253,7 +308,7 @@
 
     <style>
         /* created two classes here with the same properities */
-        .box-shape, .box-shape2, .box-shape3 {
+        .box-shape, .box-shape2, .box-shape3, .box-shape4{
             margin: 3px;
 
             background: #F2F2F2;
@@ -272,6 +327,11 @@
         .box-shape3 {
             background-color:	#E0E0E0;
         }
+        .box-shape4 {
+            padding-top: 5px;
+            padding-left: 50px;
+        }
+
         .col {
             font-family: 'Arvo', serif;
             word-spacing:0.5em;
