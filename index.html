@@ -9,26 +9,63 @@
     <title>Document</title>
 </head>
 <body>
-    <div class='container-fluid'>
+    <div class='container-fluid image-properties'>
+        <div class='row'>
+        <img src="./img/topBanner3.jpg" alt="" style="width: 100%;">
+        <div class='text-block' style="flex-shrink: 10">
+            <h4>> > GAD-7</h4>
+            <p>Generalised Anxiety Disorder Assessment</p>
+        </div>
+        </div>
+
+    </div>
+    <!-- <div class='container-fluid'>
 
         <div class='row'>
-            <!-- the 100% makes the image take up the page and not over the page. so shrinks it to -->
+           the 100% makes the image take up the page and not over the page. so shrinks it to 
                 <img src="./img/topBanner.jpg" width="100%">
+                <div class="centered">HELLO WORLD</div>
+            </div>
+        </div> 
+    </div> -->
+    <div class='container'>
+        <div class='row'>
+            <div class='col'>
+                <br>
+                Generalized Anxiety Disorder 7 (GAD-7) is a self-reported questionnaire for screening and severity measuring of 
+                generalized anxiety disorder (GAD).[1] GAD-7 has seven items, which measure severity of various signs of GAD according to reported 
+                response categories with assigned points (see below). Assessment is indicated by the total score, which is made up by adding together 
+                the scores for the scale of all seven items.[2]
+
+                GAD-7 is a sensitive self-administrated test to assess generalized anxiety disorder,[3] normally used in outpatient and primary care 
+                settings for referral to a psychiatrist pending outcome.[4] However, it cannot be used as replacement for clinical assessment and 
+                additional evaluation should be used to confirm a diagnosis of GAD. <br />
+                source: Wikipedia
+                <br /><br />
             </div>
         </div>
     </div>
-    
+    <div class='container'>
+        <div class='row box-shape2'>
+            <div class='col'>
+                Over the last 2 weeks, how often have you been bothered
+                by any of the following problems?
+            </div>
+        </div>
+
+    </div>
+
     <div class='container'>
         <!-- new row for question 1 -->
-        <div class='row'>
+        <div class='row box-shape'>
             
             <!-- the question column and overriding top broder so not touching banner -->
-            <div class='col-sm-6' style="border-top: none;">
-                QUESTION1
+            <div class='col-sm-6'>
+                Feeling nervous, anxious or on edge?
             </div>
 
             <!-- the response column and overriding top broder so not touching banner -->
-            <div class='col-sm-6' id='response-for-question-one' style="border-top: none;">
+            <div class='col-sm-6 box' id='response-for-question-one'>
 
                 <!-- start of form for user respnses -->
                 <form>
@@ -41,9 +78,9 @@
             </div>
         </div>
 
-            <div class='row'>
+            <div class='row box-shape3'>
                 <div class='col-sm-6'>
-                    QUESTION2
+                    Not being able to stop or control worrying?
                 </div>
 
                 <div class='col-sm-6'>
@@ -56,9 +93,9 @@
                 </div>
             </div>
 
-            <div class='row'>
+            <div class='row box-shape'>
                 <div class='col-sm-6'>
-                    QUESTION 3
+                    Worrying too much about different things?
                 </div>    
                 <div class='col-sm-6'>
                     <input type="radio" id="r1" name="questionTHREE" value="0" checked="checked"> Not at all <br>
@@ -69,9 +106,9 @@
                 </div>
             </div>
 
-            <div class='row'>
+            <div class='row box-shape3'>
                 <div class='col-sm-6'>
-                    QUESTION 4
+                    Trouble relaxing?
                 </div>    
                 <div class='col-sm-6'>
 
@@ -83,9 +120,9 @@
                 </div>
             </div>
 
-            <div class='row'>
+            <div class='row box-shape'>
                 <div class='col-sm-6'>
-                    QUESTION 5
+                    Being so restless that it is hard to sit still?	
                 </div>    
                 <div class='col-sm-6'>
                     <input type="radio" id="r1" name="questionFIVE" value="0" checked="checked"> Not at all <br>
@@ -96,9 +133,9 @@
                 </div>
             </div>
 
-            <div class='row'>
+            <div class='row box-shape3'>
                 <div class='col-sm-6'>
-                    QUESTION 6
+                    Becoming easily annoyed or irritable?
                 </div>    
                 <div class='col-sm-6'>
                     <br>
@@ -110,9 +147,9 @@
                 </div>
             </div>
 
-            <div class='row'>
+            <div class='row box-shape'>
                 <div class='col-sm-6'>
-                    QUESTION 7
+                    Feeling afraid as if something awful might happen?
                 </div>    
                 <div class='col-sm-6'>
 
@@ -126,8 +163,9 @@
             </div>
                     <br>
 
-
-                    <input type='button' id="submit" value='get score'></button>
+                <div class='text-center'>
+                    <input type='button' id="submit" value='S U B M I T' class='submitButton'></button>
+                </div>
                 <!-- end of form -->
                 <form>
 
@@ -212,19 +250,90 @@
     </div>
 
     <style>
-        .col-sm-6 {
-            border: solid black 1px;
-            border-bottom-style: none;
-            border-right-style: none;
-            border-left-style: none;
-            padding-top: 10px;
-            font-family: 'Arvo', serif;
-            line-height: 2;
+        /* created two classes here with the same properities */
+        .box-shape, .box-shape2, .box-shape3 {
+            margin: 3px;
 
-        }
-        .html{
+            background: #F2F2F2;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 2px #fff inset,
+                        -1px -1px 2px #fff inset;
+            border-radius: 3px/6px;  
             font-family: 'Arvo', serif;
         }
+        /* this class will have all of the properities above but a different background colour */
+        .box-shape2 {
+            background-color:paleturquoise;
+            padding: 3%;
+        }
+
+        .box-shape3 {
+            background-color:	#E0E0E0;
+        }
+        .col {
+            font-family: 'Arvo', serif;
+            word-spacing:0.5em;
+        }
+
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+
+        .text-block{
+                font-size: 3.0vw;
+                position: absolute;
+                bottom: 0px;
+
+                background-color: black;
+                color: white;
+                padding-left: 30px;
+                padding-right: 20px;
+                width: 100%;
+            }
+
+        .image-properties {
+                position: relative;
+    
+        }
+        /* tragetting the first col-sm-6 in every new div. As every row has two col-sm-6, then
+           the second one with the buttons won't be targetted */
+        .col-sm-6:nth-child(1) {
+            text-align: center;
+        }
+
+        .submitButton {
+            margin-bottom: 20px;
+            width: 50%;
+            background-color:paleturquoise;
+	border:1px dotted black;
+	display:inline-block;
+	cursor:pointer;
+
+
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+
+}
+.submitButton:hover {
+	background:linear-gradient(to bottom, #02c3d1 5%, #34e1ed 100%);
+	background-color:#02c3d1;
+}
+.submitButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+
+        
+
     </style>
 
 
