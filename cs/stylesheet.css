@@ -1,0 +1,89 @@
+.box-shape, .box-shape2, .box-shape3, .box-shape4{
+    margin: 3px;
+
+    background: #F2F2F2;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #fff inset,
+                -1px -1px 2px #fff inset;
+    border-radius: 3px/6px;  
+    font-family: 'Arvo', serif;
+}
+
+.box-shape2 {
+    background-color:paleturquoise;
+    padding: 3%;
+}
+
+.box-shape3 {
+    background-color:	#E0E0E0;
+}
+.box-shape4 {
+    padding-top: 5px;
+    padding-left: 50px;
+}
+
+.col {
+    font-family: 'Arvo', serif;
+    word-spacing:0.5em;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+.text-block{
+    font-size: 3.0vw;
+    position: absolute;
+    bottom: 0px;
+
+    background-color: black;
+    color: white;
+    padding-left: 30px;
+    padding-right: 20px;
+    width: 100%;
+    }
+
+.image-properties {
+    position: relative;
+
+}
+
+.col-sm-6:nth-child(1) {
+    text-align: center;
+}
+
+.col-sm-6 {
+    padding-top: 20px;
+}
+
+.submitButton {
+    margin-bottom: 20px;
+    width: 50%;
+    background-color:paleturquoise;
+    border:1px dotted black;
+    display:inline-block;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+
+}
+.submitButton:hover {
+    background:linear-gradient(to bottom, #02c3d1 5%, #34e1ed 100%);
+    background-color:#02c3d1;
+}
+.submitButton:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+
+        
+

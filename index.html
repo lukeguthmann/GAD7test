@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css font -->
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./cs/stylesheet.css">
 
-    <title>Document</title>
+
+
+
+    <title>GAD-7 Test</title>
 </head>
 <body>
     <div class='container-fluid image-properties'>
@@ -205,217 +209,19 @@
                     </div>
                 </div>
 
-                <script>
-                        // creating a total score variable to hold all of the points that will be displayed to the user
-                        let totalScore = 0;
-                        // creating an event listener that is using ONCLICK. That means, when the html code with id='submit' is CLICKED,
-                        // which happens to be a button, then this function I am creating here will be activates
-                        document.getElementById('submit').onclick = function() {
-                        
-                         // creating a varible called radios1. Inside of this variable I am using the DOCUMENT JS command which means that
-                         // I am targetting this html document. Then, the html that I want to retrieve is going to GETTHEELEMENTBYNAME and the html
-                         // code name='questionONE'. This means I now have the html code and can directly manipualte and interact with the HTML line
-                         // --> <input type="radio" id="r1" name="questionONE" value="0" checked="checked"> Not at all <br> ... Now, as there are
-                         // MULTIPLE of these, then radios1 becomes --> NodeList(4) [input#r1, input#r2, input#r3, input#r3].. and each of these
-                         // contain the html <input type="radio" id="r2" name="questionONE" value="0"> ... BUT!! the id= changes for each one.
-                         var radios1 = document.getElementsByName('questionONE');
 
 
-                            // as radios1 is a NODELIST, then I am interating over it. So, each element in that list has direct access to the html
-                            // with the element name='questionONE', but, depending on what I have checked will be change. because currently the id='r1' has
-                            // checked='checked' by default, BUT, this changes depending on what the user has selected. So, id='r3' might become checked instead
-                            // on the default id='r1' I created. 
-                            for (var radio1 of radios1) {
-
-                                // IF IT IS TRUE, that the html that I am currently iterating over has the CHECKED proerty, then execute this code
-                                if (radio1.checked) {
-
-                                    //converting the string value that is stored in each input type radio to a number
-                                    totalScore += Number(radio1.value);
-
-                                    console.log(radio1) // prints .. <input type="radio" id="r3" name="rate" value="2" checked="checked">
-                                    console.log(radio1.name); // this would print "rate"
-                                    console.log(radio1.type); // this would print 'radio'
-                                    break
-                                }
-                            }
-
-                            var radios2 = document.getElementsByName('questionTWO');
-                            for (var radio2 of radios2) {
-                                if (radio2.checked) { 
-                                    totalScore += Number(radio2.value);
-                                }
-                            }
-
-                            var radios3 = document.getElementsByName('questionTHREE');
-                            for (var radio3 of radios3) {
-                                if (radio3.checked) {
-                                    
-                                    totalScore += Number(radio3.value);
-
-                                }
-                            }
-
-                            var radios4 = document.getElementsByName('questionFOUR');
-                            for (var radio4 of radios4) {
-                                if (radio4.checked) {
-                                    
-                                    totalScore += Number(radio4.value);
-
-                                }
-                            }
-
-                            var radios5 = document.getElementsByName('questionFIVE');
-                            for (var radio5 of radios5) {
-                                if (radio5.checked) {
-                                    
-                                    totalScore += Number(radio5.value);
-
-                                }
-                            }
-
-                            var radios6 = document.getElementsByName('questionSIX');
-                            for (var radio6 of radios6) {
-                                if (radio6.checked) {
-                                    
-                                    totalScore += Number(radio6.value);
-
-                                }
-                            }
-
-                            var radios7 = document.getElementsByName('questionSEVEN');
-                            for (var radio7 of radios7) {
-                                if (radio7.checked) {
-                                    
-                                    totalScore += Number(radio7.value);
-
-                                }
-                            }
-                            
-                            let htmlForScore = "<p> Your score is : " + totalScore + "<br>"; 
-
-                            if(totalScore <= 4  ){
-                                document.getElementById('show-user-score').innerHTML = htmlForScore + " Minimal anxiety </p> <br>";
-                            } else if (totalScore >= 5 && totalScore <= 9){
-                                document.getElementById('show-user-score').innerHTML = htmlForScore + " Mild anxiety </p> <br>";
-                            } else if (totalScore >= 10 && totalScore <= 14){
-                                document.getElementById('show-user-score').innerHTML = htmlForScore + " Moderate anxiety </p> <br>";
-                            } else{
-                                document.getElementById('show-user-score').innerHTML = htmlForScore + " Severe anxiety </p> <br>";
-                            }
-                        
-                        //resetting the total score so if the user submits again, it won't add onto that  
-                        totalScore = 0;
-                    }
 
 
-                </script>
-            </div>
+
+
+            
+
+        </div>
 
 
         </div>
     </div>
-
-    <style>
-        /* created two classes here with the same properities */
-        .box-shape, .box-shape2, .box-shape3, .box-shape4{
-            margin: 3px;
-
-            background: #F2F2F2;
-            border: 1px solid #ccc;
-            box-shadow: 1px 1px 2px #fff inset,
-                        -1px -1px 2px #fff inset;
-            border-radius: 3px/6px;  
-            font-family: 'Arvo', serif;
-        }
-        /* this class will have all of the properities above but a different background colour */
-        .box-shape2 {
-            background-color:paleturquoise;
-            padding: 3%;
-        }
-
-        .box-shape3 {
-            background-color:	#E0E0E0;
-        }
-        .box-shape4 {
-            padding-top: 5px;
-            padding-left: 50px;
-        }
-
-        .col {
-            font-family: 'Arvo', serif;
-            word-spacing:0.5em;
-        }
-
-
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            }
-
-        .text-block{
-                font-size: 3.0vw;
-                position: absolute;
-                bottom: 0px;
-
-                background-color: black;
-                color: white;
-                padding-left: 30px;
-                padding-right: 20px;
-                width: 100%;
-            }
-
-        .image-properties {
-                position: relative;
-    
-        }
-        /* tragetting the first col-sm-6 in every new div. As every row has two col-sm-6, then
-           the second one with the buttons won't be targetted */
-        .col-sm-6:nth-child(1) {
-            text-align: center;
-        }
-
-        .col-sm-6 {
-            padding-top: 20px;
-        }
-
-        .submitButton {
-            margin-bottom: 20px;
-            width: 50%;
-            background-color:paleturquoise;
-	border:1px dotted black;
-	display:inline-block;
-	cursor:pointer;
-
-
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-
-}
-.submitButton:hover {
-	background:linear-gradient(to bottom, #02c3d1 5%, #34e1ed 100%);
-	background-color:#02c3d1;
-}
-.submitButton:active {
-	position:relative;
-	top:1px;
-}
-
-        
-
-
-        
-
-    </style>
-
-
-
-
-
 
 
 
@@ -424,5 +230,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- my javascript for the website. I was required to put it down the bottom for the application to work. -->
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    
 </body>
 </html>
